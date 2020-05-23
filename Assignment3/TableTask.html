@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table style="width:100%"> -->
+    <table style="width:40%;" id="myTable">
+        <tr>
+            <th>Firstname</td>
+            <th>Lastname</td> 
+            <th>Power</td>
+        </tr>
+        <tr>
+            <td>Abhay</td>
+            <td>Singh</td>
+            <td>4800</td>
+        </tr>
+        <tr>
+            <td>Mansi</td>
+            <td>Singla</td>
+            <td>9400</td>
+        </tr>
+        <tr>
+            <td>Pranjal</td>
+            <td>Singh</td>
+            <td>4800</td>
+        </tr>
+        <tr>
+            <td>Harpreet</td>
+            <td>Gill</td>
+            <td>5000</td>
+        </tr>
+    </table>
+    <button id="btn1">Alternate Background Color to rows</button>
+    <button id="btn2">Header Italic Font</button>
+    <button id="btn3">Alternate text color to column events </button>
+    <button id="btn4">Last Element of Each column should have italic font</button>
+    <button id="btn5">First Row should have underlined font style</button>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        $("btn1").onclick = function(){
+            var row = $("myTable").rows;
+            var totalRows = row.length;
+            var color = ['green','blue'];
+            for(var i = 0 ; i<totalRows; i++)
+            {
+                if(i%2==0)
+                {
+                    newColor = color[0];
+                }
+                else
+                {
+                    newColor = color[1]; 
+                }
+                row.item(i).style.backgroundColor=newColor;
+            }
+        }
+        $("btn2").onclick = function(){
+            var p1 = $("myTable");
+           // p1.rows.item(0).style.fontWeight = "bold";
+           p1.rows.item(0).style.fontStyle = "italic";
+        }
+        $("btn3").onclick = function(){
+            var row = $('myTable').rows;
+            var totalRows = row.length;
+            var color = ['red','orange'];
+            for(var i = 0 ; i<totalRows; i++)
+            {
+                for(var j = 0; j<row[i].cells.length; j++)
+                {
+                    if(j%2==0)
+                    {
+                        newColor = color[0];
+                    }
+                    else
+                    {
+                        newColor = color[1]; 
+                    }
+                    row[i].cells[j].style.color=newColor;
+                }
+            }
+        }
+        $("btn4").onclick = function(){
+            var p1 = $("myTable");
+            var totalRows = $("myTable").rows.length;
+            p1.rows.item(totalRows-1).style.fontStyle = "italic";
+        }
+        $("btn5").onclick = function(){
+            var row = $('myTable').rows;
+            var totalRows = row.length;
+            var color = ['red','orange'];
+            for(var i = 0 ; i<totalRows; i++)
+            {
+                row[i].cells[0].style.textDecoration = "underline";
+            }
+        }
+    </script>
+</body>
+</html>

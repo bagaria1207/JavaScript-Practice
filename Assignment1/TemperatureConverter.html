@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./Converter.js"></script>
+</head>
+<body>
+    <script>
+        var choice = prompt("Enter either c or f to enter temperature values");
+        if(choice=='c'){
+            var temp = prompt("Enter the temperature value in celcius : ");
+            document.write("<br> Temperature in Fahrenheit is :: "+tempConverterFahrenheit(temp));
+            // alert(tempConverterFahrenheit(temp));
+        }
+        else{
+            var temp = prompt("Enter the temperature value in Fahrenheit : ");
+            document.write("<br> Temperature in Celcius is :: "+tempConverterCelcius(temp));
+            // alert(tempConverterFahrenheit(temp));
+        }
+    </script>
+</body>
+</html>

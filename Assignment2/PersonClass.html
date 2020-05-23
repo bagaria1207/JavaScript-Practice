@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name , location){
+            this.name = name;
+            this.location = location;
+        }
+        Person.prototype.eat = function(){
+            document.write("I like SeaFood");
+        }
+        Person.prototype.introduction = function(){
+            document.write("My Name is "+this.name+" and I am from "+this.location);
+        }
+
+        Developer.prototype = new Person("Apurva", "Jharkhand");
+        function Developer() {
+            this.project = ['Data Science', 'Machine Learnig', 'Web Services', 'Website'];
+        }
+        Developer.prototype.takeleave = function(){
+            document.write("I am on Leave Next Week");
+        }
+        Developer.prototype.introduction = function(){
+            document.write("My name is "+this.name+" I am from "+this.location+" and i am Allocated in "+this.project);
+        }
+
+        var d1 = new Developer();
+        d1.introduction();
+        d1.eat();
+    </script>
+</body>
+</html>

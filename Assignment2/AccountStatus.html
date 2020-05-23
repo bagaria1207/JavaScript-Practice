@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bank= [ {
+                    name: 'JOHN',
+                    account: 'Saving',
+                    AccountStatus: 'blocked'
+                    },
+                    {
+                    name: 'KATE',
+                    account: 'Current',
+                    AccountStatus: 'active'
+                    },
+                    {
+                    name: 'MIKE',
+                    account: 'Saving',
+                    AccountStatus: 'active'
+                }]; 
+        var a = prompt("Enter the Name for which you want to get Account Status");
+        for(var aux of bank){
+            if(aux.name==a){
+                if(aux.AccountStatus=='blocked'){
+                    document.write("You need to activate your account");
+                }
+                else{
+                    document.write("Account is in active state");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

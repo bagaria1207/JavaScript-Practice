@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Person = {
+            Name: 'Apurva Bagaria',
+            City: 'Giidih',
+            Age: 22,
+        };
+        var output={};
+        for(var value of Object.entries(Person))
+        {
+            output[value[1]]=value[0];
+        }
+
+        for(var value of Object.entries(output))
+        {
+            document.write(value[0]+" : "+value[1]+" <br> ");
+        }
+    </script>
+</body>
+</html>

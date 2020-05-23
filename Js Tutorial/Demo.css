@@ -1,0 +1,13 @@
+body{
+    color: bisque;
+}
+h1{
+    color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+p{
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
